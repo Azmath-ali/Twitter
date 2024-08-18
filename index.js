@@ -27,8 +27,8 @@ app.use(express.json())
 app.use(cookieParser())
 
 const corsOption = {
-    // origin : "http://localhost:5173",
-    origin : process.env.URL,
+    origin : "http://localhost:5173",
+    // origin : process.env.URL,
     credentials : true
 }
 
