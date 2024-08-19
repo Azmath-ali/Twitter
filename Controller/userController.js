@@ -139,7 +139,7 @@ export const Bookmark = async (req,res)=>{
 export const getMyProfile = async (req,res)=>{
 
    try {
-    const {id} = req.params
+    const id = req.params.id
     const user = await User.findById(id).select("-password")
 
     return res.json({
@@ -154,7 +154,7 @@ export const getMyProfile = async (req,res)=>{
 
 export const getOthersProfile = async (req,res)=>{
     try {
-        const {id} = req.params
+        const id = req.params.id
         const otherUser = await User.find({_id : {$ne : id}}).select('-password')
         if(!otherUser){
             return res.json({
