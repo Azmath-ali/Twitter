@@ -19,7 +19,7 @@ export const isAuthenticated = async (req, res, next)=>{
         }
         const decode = await  jwt.verify(token, process.env.TOKEN_SECRET)
         
-        req.user = decode.userid
+        req.user = decode.userId
         next()
         
     } 
