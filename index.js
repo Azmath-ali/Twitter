@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 const corsOption = {
-    origin : "http://localhost:5173",
+    // origin : "http://localhost:5173",
     origin : "https://twitter-nt0niqyso-azmath-alis-projects.vercel.app",
     // origin : process.env.URL,
     credentials : true
